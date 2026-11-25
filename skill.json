@@ -1,0 +1,33 @@
+{
+  "$schema_version": 1,
+  "name": "srs-agmt-functional-matrix",
+  "version": "1.1.0",
+  "node_id": "AG-MT",
+  "kind": "agent",
+  "summary": "Agent Node AG-MT (Bước B5a SOP viết SRS, chỉ dự án khách đã có phần mềm): lập ma trận chức năng hiện trạng — đối chiếu từng yêu cầu nguyên tử và từng mã yêu cầu của khách với phần mềm đang chạy, danh mục chức năng hiện có, chức năng ngoài yêu cầu, chức năng × vai trò, và kết luận đáp ứng theo từng…",
+  "repository": "https://github.com/HaNguyen1409/srs-agmt-functional-matrix",
+  "license": "MIT",
+  "interface": {
+    "contract": "SKILL.md — đầu vào/đầu ra là tài liệu Markdown/JSON mô tả trong skill; không gọi trực tiếp skill khác",
+    "output_artifact": "Ma trận chức năng hiện trạng (kết luận đáp ứng theo mã yêu cầu dùng cho RTM TL-04)",
+    "sop_steps": [
+      {
+        "step": "5a",
+        "title": "Ma trận chức năng hiện trạng — chỉ dự án đã có phần mềm (mục 11): danh mục chức năng hệ thống × REQ × vai trò, cột đáp ứng",
+        "type": "Code + Agent",
+        "receives_from": "B2 (SRC hệ thống), B5",
+        "sends_to": "B5 (RTM: cột đáp ứng theo mã KH), B6, B8, B8a, B9, B12"
+      }
+    ]
+  },
+  "upstream": {},
+  "downstream": [
+    "srs-ag03-gap-analysis",
+    "srs-ag05-feature-matrix",
+    "srs-agtq-project-overview",
+    "srs-ag06-business-model",
+    "srs-ag07-screen-flow-design"
+  ],
+  "orchestrates": {},
+  "runtime": null
+}
