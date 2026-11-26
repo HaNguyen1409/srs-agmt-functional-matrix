@@ -1,7 +1,7 @@
 {
   "$schema_version": 1,
   "name": "srs-agmt-functional-matrix",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "node_id": "AG-MT",
   "kind": "agent",
   "summary": "Agent Node AG-MT (Bước B5a SOP viết SRS, chỉ dự án khách đã có phần mềm): lập ma trận chức năng hiện trạng — đối chiếu từng yêu cầu nguyên tử và từng mã yêu cầu của khách với phần mềm đang chạy, danh mục chức năng hiện có, chức năng ngoài yêu cầu, chức năng × vai trò, và kết luận đáp ứng theo từng…",

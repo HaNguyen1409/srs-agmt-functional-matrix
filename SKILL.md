@@ -1,7 +1,7 @@
 ---
 name: srs-agmt-functional-matrix
 description: "Agent Node AG-MT (Bước B5a SOP viết SRS, chỉ dự án khách đã có phần mềm): lập ma trận chức năng hiện trạng — đối chiếu từng yêu cầu nguyên tử và từng mã yêu cầu của khách với phần mềm đang chạy, danh mục chức năng hiện có, chức năng ngoài yêu cầu, chức năng × vai trò, và kết luận đáp ứng theo từng mã yêu cầu của khách (RTM TL-04 tra theo mã KH). Dùng khi mô tả ngược hoặc kê khai đáp ứng cho một hệ thống đã có."
-version: "1.1.0"
+version: "1.2.0"
 status: active
 node_id: AG-MT
 sop_step: "B5a"
@@ -118,6 +118,16 @@ Thông tin tài liệu (gồm dòng «Sở hữu nội dung») + quy tắc tổn
 ## 6. Chức năng × vai trò + 6.1 ánh xạ vai trò
 ```
 Không kèm tệp bảng yêu cầu của khách đã điền đáp ứng. Kết luận theo mã ở §2 là nguồn cho cột «Đáp ứng theo mã KH» của RTM (TL-04).
+
+### Quy tắc viết cho người đọc (TL-02 hướng dẫn §7)
+
+Phần Markdown được nhúng nguyên văn thành một chương của SRS, nên viết đúng ngay ở đây; SRS không sửa lại. Quy tắc áp dụng cho phần thân (bảng thông tin đầu tài liệu và lịch sử phiên bản bị bỏ khi nhúng). Đủ tám quy tắc V1–V8 và danh sách cụm cần tìm trước khi xuất: `07-Chuan-tai-lieu/templates/TL-02_huong-dan-lap-rap-SRS.md` §7. Năm điểm hay sai:
+
+- **Người đọc:** 11 nhóm, từ khách hàng, chủ nghiệp vụ tới lập trình viên, kiểm thử, người dùng cuối (danh sách ở mẫu TL-02 §1.2). Viết tiếng Việt thông dụng; tên kỹ thuật chỉ giữ khi người lập trình, kiểm thử cần đúng tên đó (tên bảng, cột, cờ cookie).
+- **Câu dẫn** nói bảng hoặc mục dưới là gì và đọc thế nào, không nói quy trình nội bộ của bên lập: không «nơi duy nhất», «không chép lại», «vòng 1», «brief», «baseline», «hội tụ», số bước Bxx, mã AG-xx. Ghi chú sở hữu, MECE trong khung đầu ra ở trên là hướng dẫn cho Agent, không in ra. Trỏ sang tài liệu khác chỉ ghi mã tài liệu và số mục (vd «RTM <mã tài liệu> (sheet D06_UC)»).
+- **Viết tắt và tiền tố mã:** mọi chữ viết tắt, tiền tố mã, ký hiệu trong tài liệu (vd «mã KH») phải có trong `glossary` / `id_legend` của project.json (SRS §1.4) hoặc được giải nghĩa ở câu dẫn ngay trên bảng. Dùng cái mới thì bổ sung vào `glossary` / `id_legend` cùng lúc.
+- **Trạng thái** in ra dạng nhãn thường trong bảng đọc («Đáp ứng một phần», «Chưa thấy»), không in mã HOA_GẠCH_DƯỚI; mã giữ trong JSON.
+- **Một ký hiệu một nghĩa, một khái niệm một tên:** không dùng ký hiệu trùng với tiền tố mã đã có (vd «(GĐ)» trùng GD-xx giả định); vai trò ghi đúng tên trên phần mềm ở mọi mục.
 
 ---
 
